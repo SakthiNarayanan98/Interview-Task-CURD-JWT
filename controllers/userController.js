@@ -62,7 +62,7 @@ const deleteUser = async (req, res) => {
 const fetchUsersFromAPI = async (req, res) => {
     try {
       const response = await axios.get('https://dummyjson.com/users');
-      const users = response.data.users;
+      const users = response.users;
   
       res.status(200).json(users);
     } catch (err) {
